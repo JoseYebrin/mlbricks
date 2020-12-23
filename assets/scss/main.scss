@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Pacifico&display=swap'); // Open Sans and Pacifico Fonts
+@import url("https://use.typekit.net/azv4xtt.css"); //League Gothic Font
+
+@import "./colors";
+
+*, *::after, *::after, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+body {
+  // min-height: 100vh;
+  background-image: url("assets/images/snowflake.png");
+  background-position: center;
+  background-size: 160%;
+  background-attachment: fixed;
+  background-color: $pink;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.intro {
+  margin-top: 100px;
+
+  &>h1 {
+    font-family: league-gothic, sans-serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+
+  &>h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+  }
+
+  &>hr {
+    margin: 40px 0;
+    border: 2px solid white;
+  }
+
+  &>p {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 84px;
+    line-height: 1.8;
+    letter-spacing: 0.6px;
+  }
+
+  &>.watch-video {
+    display: inline-block;
+    text-decoration: none;
+    margin: 40px 0;
+    padding: 10px;
+
+    &>* {
+      display: inline-block;
+    }
+    &>i {
+      font-size: 1.8rem;
+    }
+    &>p {
+      margin-left: 20px;
+      border-bottom: 2px solid white;
+      transform: translateY(-35%);
+    }
+  }
+}
+
+.shopping {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &>img {
+    width: 100%;
+  }
+
+  &>.continue-shopping {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $lightRosa;
+    height: 280px;
+
+    &>div{
+      & *{
+        color: $pink;
+        font-weight: 700;
+      }
+
+      &>p {
+        font-size: 1.4rem;
+        margin-bottom: 32px;
+      }
+    }
+
+    & a {
+      display: inline-block;
+      border: 4px solid $pink;
+      padding: 10px 10px;
+      letter-spacing: 3px;
+      text-decoration: none;
+
+      &>p {
+        color: inherit;
+        font-weight: inherit;
+        border-bottom: 2px solid $pink;
+      }
+    }
+
+    & #bricklink {
+      margin-bottom: 8px;
+      padding: 10px 13px;
+    }
+  }
+}
+
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+  margin: 80px auto;
+
+  & svg {
+    height: 2.4rem;
+    fill: white;
+  }
+  & i {
+    font-size: 2.4rem;
+  }
+}
+
+footer {
+  background-color: $lightRosa;
+  padding: 40px 0;
+
+  &>img {
+    width: 170px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .intro {
+    &>h3 {
+      font-size: 2rem;
+    }
+  }
+  .shopping {
+    flex-direction: row;
+
+    &>img {
+      width: 50%;
+    }
+    &>.continue-shopping {
+      width: 50%;
+      height: auto;
+    }
+  }
+  .main-footer {
+    width: 200px;
+    & svg {
+      height: 3rem;
+    }
+    & i {
+      font-size: 3rem;
+    }
+  }
+  body {
+    background-size: 120%;
+  }
+}
